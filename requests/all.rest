@@ -1,0 +1,37 @@
+POST http://localhost:3001/api/blogs/ HTTP/1.1
+content-type: application/json
+
+{
+    "title": "New Title",
+    "likes": 123456,
+    "url" : "httpsjdhjkh",
+    "author": "Gaurav",
+    "userId": "626ae968d705573f81e9c9a4"
+}
+
+###
+POST http://localhost:3001/api/users/ HTTP/1.1
+content-type: application/json
+
+  
+{
+    "username": "Certifician11",
+    "name": "Superuser",
+    "password": "Yuvaan121"
+}
+
+###
+GET http://localhost:3001/api/users/626ab971fe4e2ca59662cb17
+
+###
+
+DELETE http://localhost:3001/api/blogs/626909b869b7d012dbf4bf2c
+
+###
+POST http://localhost:3001/api/login/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "toor",
+    "password": "salainen"
+}
