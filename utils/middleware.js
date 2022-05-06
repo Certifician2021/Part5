@@ -43,23 +43,11 @@ const unknownEndpoint = (request, response) => {
     next()
   }
 
-const tokenValidator = (request, response, next) => {
-    const token = request.token
-    if (!token) {
-        return response.status(401).json({ error: 'token missing' })
-    }
 
-    const decodedToken = jwt.verify(token, process.env.SECRET)
-    if (!decodedToken.id) {
-        return response.status(401).json({ error: 'invalid token' })
-    }
-    next()
-}
 
   module.exports = {
       errorHandler,
       unknownEndpoint,
       tokenExtractor,
-      tokenValidator,
       userExtractor
   }
